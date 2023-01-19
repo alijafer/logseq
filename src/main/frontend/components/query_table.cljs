@@ -42,9 +42,9 @@
 (defn- locale-compare
   "Use locale specific comparison for strings and general comparison for others."
   [x y]
-    (if (and (number? x) (number? y))
-      (< x y)
-      (.localeCompare (str x) (str y) (state/sub :preferred-language) #js {:numeric true})))
+  (if (and (number? x) (number? y))
+    (< x y)
+    (.localeCompare (str x) (str y) (state/sub :preferred-language) #js {:numeric true})))
 
 (defn- sort-result [result {:keys [sort-by-column sort-desc? sort-nlp-date?]}]
   (if (some? sort-by-column)
@@ -97,7 +97,7 @@
         keys (if page? (distinct (concat keys [:created-at :updated-at])) keys)]
     keys))
 
-(defn- get-columns [current-block result {:keys [page?]}]
+(defn get-columns [current-block result {:keys [page?]}]
   (let [query-properties (some-> (get-in current-block [:block/properties :query-properties] "")
                                  (common-handler/safe-read-string "Parsing query properties failed"))
         columns (if (seq query-properties)
@@ -137,9 +137,9 @@
          [:tr.cursor
           (for [column columns]
             (let [title (if (and (= column :clock-time) (integer? clock-time-total))
-                             (util/format "clock-time(total: %s)" (clock/seconds->days:hours:minutes:seconds
-                                                                   clock-time-total))
-                             (name column))]
+                            (util/format "clock-time(total: %s)" (clock/seconds->days:hours:minutes:seconds
+                                                                  clock-time-total))
+                            (name column))]
               (sortable-title title column sort-state (:block/uuid current-block))))]]
         [:tbody
          (for [item result']

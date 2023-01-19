@@ -443,7 +443,7 @@
                    (not has-children?))]
     (outliner-tx/transact!
      {:outliner-op :insert-blocks}
-      (save-current-block! {:current-block current-block})
+     (save-current-block! {:current-block current-block})
      (outliner-core/insert-blocks! [new-block] current-block {:sibling? sibling?
                                                               :keep-uuid? keep-uuid?
                                                               :replace-empty-target? replace-empty-target?}))))
@@ -1379,12 +1379,12 @@
       ;; WARN file name maybe fully qualified path when paste file
       (let [file-name (util/node-path.basename (.-name file))
             [file-base ext-full ext-base] (if file-name
-                              (let [ext-base (util/node-path.extname file-name)
-                                    ext-full (if-not (config/extname-of-supported? ext-base)
-                                               (util/full-path-extname file-name) ext-base)]
-                                [(subs file-name 0 (- (count file-name)
-                                                      (count ext-full))) ext-full ext-base])
-                              ["" "" ""])
+                                           (let [ext-base (util/node-path.extname file-name)
+                                                 ext-full (if-not (config/extname-of-supported? ext-base)
+                                                            (util/full-path-extname file-name) ext-base)]
+                                             [(subs file-name 0 (- (count file-name)
+                                                                   (count ext-full))) ext-full ext-base])
+                                           ["" "" ""])
             filename  (str (gen-filename index file-base) ext-full)
             filename  (str path "/" filename)
             matched-alias (assets-handler/get-matched-alias-by-ext ext-base)
@@ -2701,7 +2701,7 @@
       (outliner-tx/transact!
        {:outliner-op :move-blocks
         :real-outliner-op :indent-outdent}
-        (outliner-core/indent-outdent-blocks! [block] indent?)))
+       (outliner-core/indent-outdent-blocks! [block] indent?)))
     (state/set-editor-op! :nil)))
 
 (defn keydown-tab-handler
@@ -3012,8 +3012,8 @@
        [:div
         [:span.mb-1.5 (str "Block " format " copied!")]
         [:div [:code.whitespace.break-all (if (= format "embed")
-                                         (str "{{embed ((" block-id "))}}")
-                                         (block-ref/->block-ref block-id))]]]
+                                           (str "{{embed ((" block-id "))}}")
+                                           (block-ref/->block-ref block-id))]]]
        :success true
        ;; use uuid to make sure there is only one toast a time
        (str "copied-block-ref:" block-id)))))
@@ -3128,9 +3128,9 @@
           ;; if the move is to cross block boundary, select the whole block
          (or (and (= direction :up) (cursor/textarea-cursor-rect-first-row? cursor-rect))
              (and (= direction :down) (cursor/textarea-cursor-rect-last-row? cursor-rect)))
-          (select-block-up-down direction)
+         (select-block-up-down direction)
           ;; simulate text selection
-          (cursor/select-up-down input direction anchor cursor-rect)))
+         (cursor/select-up-down input direction anchor cursor-rect)))
       (select-block-up-down direction))))
 
 (defn open-selected-block!
