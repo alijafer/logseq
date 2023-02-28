@@ -707,8 +707,87 @@
         :updater/quit-and-install "Neu starten, um zu installieren"
 
         :whiteboard/link-whiteboard-or-block "Whiteboard/Seite/Block verknüpfen"}
-   :nl {
-        :all-files "Alle bestanden"
+   :ar {:accessibility/skip-to-main-content "التخطي للقائمة الرئسية"
+        :tutorial/text #?(:cljs (rc/inline "tutorial-en.md")
+                          :default "tutorial-en.md")
+        :tutorial/dummy-notes #?(:cljs (rc/inline "dummy-notes-en.md")
+                                 :default "dummy-notes-en.md")
+        :on-boarding/closed-feature "مغلق {1}"
+        :on-boarding/demo-graph "هذا الرسم تجريبي, لم يتم حفظ اي تغير حتى يتم فتح مجلد محلي."
+        :on-boarding/add-graph "إضافة رسمة"
+        :on-boarding/open-local-dir "افتح مجلد محلي"
+        :on-boarding/new-graph-desc-1 "Logseq يدعم امرين Markdown and Org-mode. يمكنك فتح مجلد مستخدم من قبل او جديد . بياناتك يتم حفظها في هذا الجهاز فقط. "
+        :on-boarding/new-graph-desc-2 " بعد فتح المجلد الخاص بك, سيتم انشاء ثلاث مجلدات :"
+        :on-boarding/new-graph-desc-3 "/journals - يتم حفظ صفحات دفتر اليوميات "
+        :on-boarding/new-graph-desc-4 "/pages - يتم حفظ بقية الصفحات "
+        :on-boarding/new-graph-desc-5 "/logseq -  يتم حفظ الاعدادات, custom.css, and some metadata."
+        :on-boarding/welcome-whiteboard-modal-title "لوحة جديدة لأفكارك."
+        :on-boarding/welcome-whiteboard-modal-description "السبورة are a great tool for brainstorming and organization. Now you can place any of your thoughts from the knowledge base or new ones next to each other on a spatial canvas to connect, associate and understand in new ways."
+        :on-boarding/welcome-whiteboard-modal-skip "تخطى"
+        :on-boarding/welcome-whiteboard-modal-start "بدأ الكتابة على السبورة"
+        :on-boarding/tour-whiteboard-home "{1} الصفحة الرئيسية لسبورات الخاصة بك"
+        :on-boarding/tour-whiteboard-home-description "سبورات have their own section in the app where you can see them at a glance, create new ones or delete them easily."
+        :on-boarding/tour-whiteboard-new "{1}  انشاء سبورة جديدة"
+        :on-boarding/tour-whiteboard-new-description " هنالك الكثير من الطرق لإنشاء سبورة جديدة. One of them is always right here in the dashboard."
+        :help/start "هيا لتبدأ"
+        :help/about "عن لوجسيك"
+        :help/roadmap "خريطة الطريق"
+        :help/bug " تقارير الأخطاء"
+        :help/feature "طلب ميزة"
+        :help/changelog " التغيرات التي طرأت"
+        :help/blog " مدونة لوجسيك"
+        :help/docs "Documentation مستندات التوثيق"
+        :help/privacy "سياسة الخصوصية"
+        :help/terms "الشروط"
+        :help/forum-community "المنتدى"
+        :help/awesome-logseq "مذهل يا لوجسيك"
+        :help/shortcuts "اختصارات لوحة المفاتيح"
+        :help/shortcuts-triggers "محفزات"
+        :help/shortcut "اختصار"
+        :help/slash-autocomplete "خفض الاكمال التلقائي"
+        :help/block-content-autocomplete "كتلة المحتوى الإكمال التلقائي"
+        :help/reference-autocomplete "مرجع الصفحة الإكمال التلقائي"
+        :help/block-reference "مرجع الكتلة"
+        :help/open-link-in-sidebar "فتح رابط في الشريط الجانبي "
+        :more "مزيد"
+        :search/result-for "نتيجة البحث عن "
+        :search/items "أغراض"
+        :search/page-names "البحث في اسماء الصفحات"
+        :search-item/whiteboard "السبورة"
+        :search-item/page "صفحة"
+        :search-item/file "ملف"
+        :search-item/block "كنلة"
+        :help/context-menu "قائمة سياق الكتلة"
+
+        :bold "عريض"
+        :italics "مائل"
+        :highlight "تحديد"
+        :strikethrough "يتوسطه خط"
+
+        :untitled "بدون عنوان"
+        :right-side-bar/help "مساعدة"
+        :right-side-bar/switch-theme "اساليب السمات"
+        :right-side-bar/contents "محتويات"
+        :right-side-bar/page-graph "صفحة الرسمة"
+        :right-side-bar/block-ref "مراجع الكتل"
+        :right-side-bar/graph-view "مشاهدة الرسمة"
+        :right-side-bar/all-pages "كل الصفحات"
+        :right-side-bar/whiteboards "السبورات"
+        :right-side-bar/flashcards "البطاقات التعليمية"
+        :right-side-bar/new-page "صفحة جديدة"
+        :right-side-bar/show-journals "مشاهدة دفتر اليوميات"
+
+        :left-side-bar/journals "اليوميات"
+        :left-side-bar/create "إنشاء"
+        :left-side-bar/new-page "صفحة جديدة"
+        :left-side-bar/new-whiteboard "سبورة جديدة"
+        :left-side-bar/nav-favorites "المفضلات"
+        :left-side-bar/nav-recent-pages "مؤخرًا"
+        :page/something-went-wrong "هناك خطأ ما"
+        :page/logseq-is-having-a-problem "لوجسيك فيه مشكلة. To try to get it back to a working state, please try the following safe steps in order:"
+        :page/step "خطوة {1}"
+        :page/try "جرب"}
+   :nl {:all-files "Alle bestanden"
         :all-graphs "Alle grafieken"
         :all-journals "Alle Journalen"
         :all-pages "Alle pagina's"
@@ -967,8 +1046,7 @@
                           :default "tutorial-en.md")
 
         :updater/new-version-install "Een nieuwe versie is gedownload."
-        :updater/quit-and-install "Herstart om te installeren"
-        }
+        :updater/quit-and-install "Herstart om te installeren"}
    :fr {:tutorial/text #?(:cljs (rc/inline "tutorial-fr.md")
                           :default "tutorial-fr.md")
         :tutorial/dummy-notes #?(:cljs (rc/inline "dummy-notes-fr.md")
@@ -1297,8 +1375,7 @@
         :on-boarding/welcome-whiteboard-modal-start "Démarrer le tableau blanc"
         :on-boarding/welcome-whiteboard-modal-title "Un nouveau cadre pour vos pensées."
         :settings-page/clear-cache-warning "Vider le cache supprimera les graphiques ouverts. Vous perdrez les modifications non enregistrées."
-        :settings-page/disable-sentry-desc "Logseq ne collectera jamais votre base de données de graphes locale ni ne vendra vos données."
-     }
+        :settings-page/disable-sentry-desc "Logseq ne collectera jamais votre base de données de graphes locale ni ne vendra vos données."}
 
    :zh-CN {:accessibility/skip-to-main-content "跳转到主内容"
            :on-boarding/demo-graph "这是一份图谱的示例，在上面做的修改不会被保存，除非打开本地文件夹"
@@ -4922,4 +4999,5 @@
                 {:label "Italiano" :value :it}
                 {:label "Türkçe" :value :tr}
                 {:label "한국어" :value :ko}
-                {:label "Slovenčina" :value :sk}])
+                {:label "Slovenčina" :value :sk}
+                {:label "عربي" :value :ar}])
